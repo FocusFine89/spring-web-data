@@ -28,5 +28,4 @@ public class AutoreController {
         return autoreService.saveAutore(autore);
     }
 
-
 }
