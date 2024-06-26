@@ -28,4 +28,8 @@ public class AutoreController {
         return autoreService.saveAutore(autore);
     }
 
+    @GetMapping("/{id}")
+    public Autore findAutoreById(@PathVariable int id){
+        return autoreService.findByID(id);
+    }
 }

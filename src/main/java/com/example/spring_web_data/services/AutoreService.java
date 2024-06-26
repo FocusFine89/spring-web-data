@@ -35,6 +35,10 @@ public class AutoreService {
 
     }
 
+    public Autore findByID(int id){
+       return autoreRepository.findById(id).orElseThrow( ()-> new RuntimeException("utente non trovato"));
+    }
+
 
 
 }
