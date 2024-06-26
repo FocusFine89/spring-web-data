@@ -7,9 +7,11 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface AutoreRepository extends JpaRepository<Autore, Long> {
-    Optional<Autore> findByEmail(String email);
+public interface AutoreRepository extends JpaRepository<Autore, Integer> {
+    Autore findByEmail(String email);
 
     boolean existsByEmail(String email);
+
+
 
 }

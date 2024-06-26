@@ -22,12 +22,12 @@ public class Autore {
 
     public Autore(){}
 
-    public Autore(String nome, String cognome, String email, String dataDiNascita, String avatar) {
+    public Autore(String nome, String cognome, String email, String dataDiNascita) {
         this.nome = nome;
         this.cognome = cognome;
         this.email = email;
         this.dataDiNascita = dataDiNascita;
-        this.avatar = avatar;
+
     }
 
 

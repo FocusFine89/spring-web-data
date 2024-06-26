@@ -3,7 +3,6 @@ package com.example.spring_web_data.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.Optional;
 import java.util.Random;
 
 @Entity
@@ -24,12 +23,12 @@ public class BlogPost {
     //Relazione Many To One
     @ManyToOne
     @JoinColumn(name= "autore", nullable = false)
-    private Optional<Autore> autore;
+    private Autore autore;
 
     //Costruttori
     public BlogPost(){}
 
-    public BlogPost(String categoria, String titolo, String cover, String contenuto, int tempoDiLettura, Optional<Autore> autore) {
+    public BlogPost(String categoria, String titolo, String cover, String contenuto, int tempoDiLettura, Autore autore) {
         this.categoria = categoria;
         this.titolo = titolo;
         this.cover = cover;
@@ -86,11 +85,11 @@ public class BlogPost {
         this.tempoDiLettura = tempoDiLettura;
     }
 
-    public Optional<Autore> getAutore() {
+    public Autore getAutore() {
         return autore;
     }
 
-    public void setAutore(Optional<Autore> autore) {
+    public void setAutore(Autore autore) {
         this.autore = autore;
     }
 
