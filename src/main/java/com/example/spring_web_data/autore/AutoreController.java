@@ -1,13 +1,13 @@
-package com.example.spring_web_data.controllers;
+package com.example.spring_web_data.autore;
 
 
-import com.example.spring_web_data.entities.Autore;
-import com.example.spring_web_data.services.AutoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Optional;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/autori")
@@ -24,12 +24,21 @@ public class AutoreController {
 
     //Salva autore
     @PostMapping
-    public Autore saveAutore(@RequestBody Autore autore){
+    public Autore saveAutore(@RequestBody @Validated AutorePayload autore){
         return autoreService.saveAutore(autore);
     }
 
     @GetMapping("/{id}")
     public Autore findAutoreById(@PathVariable int id){
         return autoreService.findByID(id);
+    }
+
+    //Upload Avatar dell'account
+    @PostMapping("/{id}/avatar")
+    public String uploadAvatar(@RequestParam("avatar")MultipartFile image) throws IOException{
+        // il request param "avatar" deve corrispondere ESATTAMENTE alla chiave del payload Multipart dove stiamo
+        // allegando il file. Se non corrispondono il file non verrà trovato
+
+        return this.autoreService.uploadProfileImg(image);
     }
 }

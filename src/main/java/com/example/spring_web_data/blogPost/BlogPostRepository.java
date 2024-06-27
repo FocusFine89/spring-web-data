@@ -1,7 +1,5 @@
-package com.example.spring_web_data.repositories;
+package com.example.spring_web_data.blogPost;
 
-import com.example.spring_web_data.entities.Autore;
-import com.example.spring_web_data.entities.BlogPost;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

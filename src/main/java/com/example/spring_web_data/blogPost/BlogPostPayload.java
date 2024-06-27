@@ -1,4 +1,4 @@
-package com.example.spring_web_data.payLoads;
+package com.example.spring_web_data.blogPost;
 
 public class BlogPostPayload {
     //Attributi

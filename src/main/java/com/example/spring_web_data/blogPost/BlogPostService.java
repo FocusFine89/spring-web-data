@@ -1,10 +1,7 @@
-package com.example.spring_web_data.services;
+package com.example.spring_web_data.blogPost;
 
-import com.example.spring_web_data.controllers.BlogPostController;
-import com.example.spring_web_data.entities.Autore;
-import com.example.spring_web_data.entities.BlogPost;
-import com.example.spring_web_data.payLoads.BlogPostPayload;
-import com.example.spring_web_data.repositories.BlogPostRepository;
+import com.example.spring_web_data.autore.Autore;
+import com.example.spring_web_data.autore.AutoreService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -16,7 +13,8 @@ public class BlogPostService {
     @Autowired
     BlogPostRepository blogPostRepository;
 
-    @Autowired AutoreService autoreService;
+    @Autowired
+    AutoreService autoreService;
 
     //cerca tutti i blogpost impaginati
     public Page<BlogPost> getBlogPost(int pageNumber, int pageSize){

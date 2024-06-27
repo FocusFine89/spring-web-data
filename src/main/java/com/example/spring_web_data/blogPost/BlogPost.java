@@ -1,9 +1,7 @@
-package com.example.spring_web_data.entities;
+package com.example.spring_web_data.blogPost;
 
+import com.example.spring_web_data.autore.Autore;
 import jakarta.persistence.*;
-import lombok.*;
-
-import java.util.Random;
 
 @Entity
 @Table(name = "blogpost")

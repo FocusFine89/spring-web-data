@@ -1,4 +1,4 @@
-package com.example.spring_web_data.entities;
+package com.example.spring_web_data.autore;
 
 import jakarta.persistence.*;
 

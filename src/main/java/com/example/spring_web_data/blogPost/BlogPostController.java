@@ -1,8 +1,5 @@
-package com.example.spring_web_data.controllers;
+package com.example.spring_web_data.blogPost;
 
-import com.example.spring_web_data.entities.BlogPost;
-import com.example.spring_web_data.payLoads.BlogPostPayload;
-import com.example.spring_web_data.services.BlogPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
